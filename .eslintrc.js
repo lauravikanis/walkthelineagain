@@ -4,7 +4,11 @@ module.exports = {
   ignorePatterns: [".eslintrc.js"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "./tsconfig.json",
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: "module",
   },
   plugins: ["@typescript-eslint", "react", "import"],
   extends: [
